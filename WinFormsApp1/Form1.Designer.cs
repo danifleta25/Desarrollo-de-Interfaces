@@ -28,33 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnOK = new Button();
+            txt1 = new TextBox();
             SuspendLayout();
             // 
-            // button1
+            // btnOK
             // 
-            button1.AccessibleName = "btnOK";
-            button1.Location = new Point(324, 292);
-            button1.Name = "button1";
-            button1.Size = new Size(119, 45);
-            button1.TabIndex = 0;
-            button1.Text = "OK";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnOK.AccessibleName = "btnOK";
+            btnOK.Location = new Point(324, 292);
+            btnOK.Name = "btnOK";
+            btnOK.Size = new Size(119, 45);
+            btnOK.TabIndex = 0;
+            btnOK.Text = "OK";
+            btnOK.UseVisualStyleBackColor = true;
+            btnOK.Click += button1_Click;
+            // 
+            // txt1
+            // 
+            txt1.AccessibleName = "txt1";
+            txt1.Location = new Point(324, 145);
+            txt1.Name = "txt1";
+            txt1.Size = new Size(100, 23);
+            txt1.TabIndex = 1;
+            txt1.TextChanged += textBox1_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(txt1);
+            Controls.Add(btnOK);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
+        private Button btnOK;
+        private TextBox txt1;
     }
 }
