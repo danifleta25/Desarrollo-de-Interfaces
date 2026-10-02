@@ -129,6 +129,7 @@
             label18.TabIndex = 17;
             label18.Text = "0";
             label18.TextAlign = ContentAlignment.MiddleCenter;
+            label18.Click += get_Number;
             // 
             // label17
             // 
@@ -165,6 +166,7 @@
             label15.TabIndex = 14;
             label15.Text = "3";
             label15.TextAlign = ContentAlignment.MiddleCenter;
+            label15.Click += get_Number;
             // 
             // label14
             // 
@@ -177,6 +179,7 @@
             label14.TabIndex = 13;
             label14.Text = "2";
             label14.TextAlign = ContentAlignment.MiddleCenter;
+            label14.Click += get_Number;
             // 
             // label13
             // 
@@ -189,6 +192,7 @@
             label13.TabIndex = 12;
             label13.Text = "1";
             label13.TextAlign = ContentAlignment.MiddleCenter;
+            label13.Click += get_Number;
             // 
             // restar
             // 
@@ -213,6 +217,7 @@
             label11.TabIndex = 10;
             label11.Text = "6";
             label11.TextAlign = ContentAlignment.MiddleCenter;
+            label11.Click += get_Number;
             // 
             // label10
             // 
@@ -225,6 +230,7 @@
             label10.TabIndex = 9;
             label10.Text = "5";
             label10.TextAlign = ContentAlignment.MiddleCenter;
+            label10.Click += get_Number;
             // 
             // label9
             // 
@@ -237,6 +243,7 @@
             label9.TabIndex = 8;
             label9.Text = "4";
             label9.TextAlign = ContentAlignment.MiddleCenter;
+            label9.Click += get_Number;
             // 
             // multiplicar
             // 
@@ -261,6 +268,7 @@
             label7.TabIndex = 6;
             label7.Text = "9";
             label7.TextAlign = ContentAlignment.MiddleCenter;
+            label7.Click += get_Number;
             // 
             // label6
             // 
@@ -273,6 +281,7 @@
             label6.TabIndex = 5;
             label6.Text = "8";
             label6.TextAlign = ContentAlignment.MiddleCenter;
+            label6.Click += get_Number;
             // 
             // label5
             // 
@@ -285,6 +294,7 @@
             label5.TabIndex = 4;
             label5.Text = "7";
             label5.TextAlign = ContentAlignment.MiddleCenter;
+            label5.Click += get_Number;
             // 
             // dividir
             // 

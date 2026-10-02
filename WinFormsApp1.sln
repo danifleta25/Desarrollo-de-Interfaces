@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba Matemática", "Prueb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matching Game", "Matching Game\Matching Game.csproj", "{7C860E6B-EC32-4323-A4CD-824675C23C5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\Calculadora.csproj", "{41EEB31F-7ECC-4EDE-ADFE-88095C57D2C5}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Calculadora+", "Calculadora+\Calculadora+.vbproj", "{56BB1177-5A32-422F-8F2E-493B9DC4719F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{7C860E6B-EC32-4323-A4CD-824675C23C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C860E6B-EC32-4323-A4CD-824675C23C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C860E6B-EC32-4323-A4CD-824675C23C5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{41EEB31F-7ECC-4EDE-ADFE-88095C57D2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41EEB31F-7ECC-4EDE-ADFE-88095C57D2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41EEB31F-7ECC-4EDE-ADFE-88095C57D2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41EEB31F-7ECC-4EDE-ADFE-88095C57D2C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56BB1177-5A32-422F-8F2E-493B9DC4719F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56BB1177-5A32-422F-8F2E-493B9DC4719F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56BB1177-5A32-422F-8F2E-493B9DC4719F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56BB1177-5A32-422F-8F2E-493B9DC4719F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
