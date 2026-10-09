@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewer", "PictureViewer\PictureViewer.csproj", "{B8341743-10AB-4100-820D-1D2B55490E28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba Matemática", "Prueba Matemática\Prueba Matemática.csproj", "{5E92AEC5-3C5E-4568-82E3-6A41EAB7FB3C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matching Game", "Matching Game\Matching Game.csproj", "{7C860E6B-EC32-4323-A4CD-824675C23C5C}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Calculadora+", "Calculadora+\Calculadora+.vbproj", "{56BB1177-5A32-422F-8F2E-493B9DC4719F}"
@@ -16,6 +14,8 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LaberintoVB", "LaberintoVB\LaberintoVB.vbproj", "{BF7DFD4A-951F-4ACC-9DA5-E1B65A38DDFB}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PruebaMatematicaVB", "PruebaMatematicaVB\PruebaMatematicaVB.vbproj", "{F15053C9-2275-4914-A56D-1611A5C00272}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MatchingGameVB", "MatchingGameVB\MatchingGameVB.vbproj", "{63940406-DA35-4F26-86DF-213059FF4A4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,6 @@ Global
 		{B8341743-10AB-4100-820D-1D2B55490E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8341743-10AB-4100-820D-1D2B55490E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8341743-10AB-4100-820D-1D2B55490E28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E92AEC5-3C5E-4568-82E3-6A41EAB7FB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E92AEC5-3C5E-4568-82E3-6A41EAB7FB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E92AEC5-3C5E-4568-82E3-6A41EAB7FB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E92AEC5-3C5E-4568-82E3-6A41EAB7FB3C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C860E6B-EC32-4323-A4CD-824675C23C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C860E6B-EC32-4323-A4CD-824675C23C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C860E6B-EC32-4323-A4CD-824675C23C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{F15053C9-2275-4914-A56D-1611A5C00272}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F15053C9-2275-4914-A56D-1611A5C00272}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F15053C9-2275-4914-A56D-1611A5C00272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63940406-DA35-4F26-86DF-213059FF4A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63940406-DA35-4F26-86DF-213059FF4A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63940406-DA35-4F26-86DF-213059FF4A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63940406-DA35-4F26-86DF-213059FF4A4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
