@@ -30,8 +30,8 @@ namespace Prueba_Matemática
             num2 = randomizer.Next(51);
 
             //Numeros aleatorios resta
-            resta1 = randomizer.Next(51);
-            resta2 = randomizer.Next(1, resta1);
+            resta1 = randomizer.Next(1, 51);
+            resta2 = randomizer.Next(1, resta1 + 1);
 
             //Numeros aleatorios multiplicacion
             mult1 = randomizer.Next(2, 11);

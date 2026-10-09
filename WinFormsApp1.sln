@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matching Game", "Matching G
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Calculadora+", "Calculadora+\Calculadora+.vbproj", "{56BB1177-5A32-422F-8F2E-493B9DC4719F}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LaberintoVB", "LaberintoVB\LaberintoVB.vbproj", "{BF7DFD4A-951F-4ACC-9DA5-E1B65A38DDFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{56BB1177-5A32-422F-8F2E-493B9DC4719F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56BB1177-5A32-422F-8F2E-493B9DC4719F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56BB1177-5A32-422F-8F2E-493B9DC4719F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF7DFD4A-951F-4ACC-9DA5-E1B65A38DDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7DFD4A-951F-4ACC-9DA5-E1B65A38DDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7DFD4A-951F-4ACC-9DA5-E1B65A38DDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7DFD4A-951F-4ACC-9DA5-E1B65A38DDFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
