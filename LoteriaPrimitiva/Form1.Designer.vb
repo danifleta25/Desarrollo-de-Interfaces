@@ -40,6 +40,7 @@ Partial Class Form1
         lblUser5 = New Label()
         lblUser4 = New Label()
         Panel3 = New Panel()
+        btnAuto = New Button()
         btnBorrar = New Button()
         btnManual = New Button()
         Panel4 = New Panel()
@@ -97,6 +98,8 @@ Partial Class Form1
         CheckBox49 = New CheckBox()
         gpBoxResultado = New GroupBox()
         lblResultado = New Label()
+        Label1 = New Label()
+        Label2 = New Label()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -184,6 +187,7 @@ Partial Class Form1
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(lbl1)
         Panel1.Controls.Add(lblReintegro)
         Panel1.Controls.Add(lbl3)
@@ -198,6 +202,7 @@ Partial Class Form1
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(lblUser1)
         Panel2.Controls.Add(lblUserReintegro)
         Panel2.Controls.Add(lblUser3)
@@ -290,12 +295,25 @@ Partial Class Form1
         ' Panel3
         ' 
         Panel3.BorderStyle = BorderStyle.Fixed3D
+        Panel3.Controls.Add(btnAuto)
         Panel3.Controls.Add(btnBorrar)
         Panel3.Controls.Add(btnManual)
         Panel3.Location = New Point(153, 310)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(440, 48)
         Panel3.TabIndex = 11
+        ' 
+        ' btnAuto
+        ' 
+        btnAuto.AutoSize = True
+        btnAuto.BackColor = SystemColors.ActiveCaption
+        btnAuto.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnAuto.Location = New Point(171, 10)
+        btnAuto.Name = "btnAuto"
+        btnAuto.Size = New Size(94, 25)
+        btnAuto.TabIndex = 2
+        btnAuto.Text = "AUTOMÁTICA"
+        btnAuto.UseVisualStyleBackColor = False
         ' 
         ' btnBorrar
         ' 
@@ -334,7 +352,7 @@ Partial Class Form1
         txtBoxReintegro.Location = New Point(225, 13)
         txtBoxReintegro.Name = "txtBoxReintegro"
         txtBoxReintegro.ReadOnly = True
-        txtBoxReintegro.Size = New Size(81, 23)
+        txtBoxReintegro.Size = New Size(192, 23)
         txtBoxReintegro.TabIndex = 1
         txtBoxReintegro.Text = "0"
         ' 
@@ -962,6 +980,24 @@ Partial Class Form1
         lblResultado.Size = New Size(0, 15)
         lblResultado.TabIndex = 0
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(276, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(112, 15)
+        Label1.TabIndex = 7
+        Label1.Text = "TU COMBINACIÓN:"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(255, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(159, 15)
+        Label2.TabIndex = 8
+        Label2.Text = "COMBINACIÓN GANADORA"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -976,8 +1012,11 @@ Partial Class Form1
         Name = "Form1"
         Text = "La combinación de la primitiva es:"
         Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         panelCheckboxes.ResumeLayout(False)
@@ -1070,4 +1109,7 @@ Partial Class Form1
     Friend WithEvents CheckBox49 As CheckBox
     Friend WithEvents gpBoxResultado As GroupBox
     Friend WithEvents lblResultado As Label
+    Friend WithEvents btnAuto As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

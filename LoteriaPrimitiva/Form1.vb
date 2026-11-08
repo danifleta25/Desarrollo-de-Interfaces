@@ -2,6 +2,7 @@
 
     Dim numeros(5) As Integer
     Dim random As New Random()
+    Dim numUsuario(5) As Integer
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -15,7 +16,6 @@
         ' Generamos los 6 numeros aleatorios
         For i = 0 To 5 Step 1
             Dim n As Integer
-
             Do
                 n = random.Next(1, 50)
             Loop Until repetido(n) = False
@@ -37,6 +37,28 @@
         ' Reitegro
         Dim reintegro As Integer = random.Next(0, 10)
         lblReintegro.Text = "REINTEGRO: " + reintegro.ToString()
+
+        ' Mostramos el reintegro del usuario
+        lblUserReintegro.Text = "REINTEGRO: " + txtBoxReintegro.Text.ToString()
+
+        'Asignamos los numeros del usuario a sus labels
+        lblUser1.Text = numUsuario(0).ToString()
+        lblUser2.Text = numUsuario(1).ToString()
+        lblUser3.Text = numUsuario(2).ToString()
+        lblUser4.Text = numUsuario(3).ToString()
+        lblUser5.Text = numUsuario(4).ToString()
+        lblUser6.Text = numUsuario(5).ToString()
+
+        'Mostramos el numero de aciertos
+        lblResultado.Text = "Nº ACIERTOS: " + comprobar_Aciertos(numUsuario).ToString()
+
+        'Comprobar reintegro
+        If txtBoxReintegro.Text.Equals(reintegro.ToString()) Then
+            lblUserReintegro.Text = "REINTEGRO: ACIERTO"
+        Else
+            lblUserReintegro.Text = "REINTEGRO: FALLIDO"
+        End If
+
 
     End Sub
 
@@ -80,32 +102,25 @@
     End Function
 
 
-
-
-
     Private Sub btnManual_Click(sender As Object, e As EventArgs) Handles btnManual.Click
-        Dim numUsuario(5) As Integer
 
-
-        ' Comprobar que se han marcado 6 checkBox
         Dim contador As Integer = 0
+
         ' Recorremos los controles del panelCheckBoxes
         For Each ctrl As Control In panelCheckboxes.Controls
             If TypeOf ctrl Is CheckBox Then
                 Dim cBox As CheckBox = CType(ctrl, CheckBox)
 
                 If cBox.Checked Then
-
                     If contador < 6 Then
                         ' Si el checkbox esta marcado guardamos el número en numUsuario eliminando los ":"
                         numUsuario(contador) = Integer.Parse(cBox.Text.Replace(":", "").Trim())
                     End If
                     contador += 1
-
                 End If
             End If
         Next
-
+        'Comprobar que se han marcado 6 checkBox
         If contador <> 6 Then
             MsgBox("Hay que seleccionar exactamente 6 numeros")
             Exit Sub
@@ -115,26 +130,35 @@
         ' Ordenamos numUsuario
         ordenar(numUsuario)
 
-
-        lblUser1.Text = numUsuario(0).ToString()
-        lblUser2.Text = numUsuario(1).ToString()
-        lblUser3.Text = numUsuario(2).ToString()
-        lblUser4.Text = numUsuario(3).ToString()
-        lblUser5.Text = numUsuario(4).ToString()
-        lblUser6.Text = numUsuario(5).ToString()
-
-
-
-        lblUserReintegro.Text = "REINTEGRO: " + txtBoxReintegro.Text.ToString()
-
-
-
+        'Mostramos resultados
+        mostrarReintegro()
         mostrar_Resultados_Sorteo()
 
-        lblResultado.Text = "Nº ACIERTOS: " + comprobar_Aciertos(numUsuario).ToString()
+    End Sub
 
+    Private Sub btnAuto_Click(sender As Object, e As EventArgs) Handles btnAuto.Click
+        'Limpiamos los checkBox
+        btnBorrar_Click(sender, e)
 
+        For i = 0 To 5 Step 1
+            Dim num As Integer = random.Next(1, 50)
+            Dim numCheckBox As String = "CheckBox" + num.ToString()
+            Dim cBox As CheckBox = CType(panelCheckboxes.Controls(numCheckBox), CheckBox)
 
+            If cBox.Checked = False Then
+                cBox.Checked = True
+            Else
+                i -= 1
+            End If
+        Next
+
+        btnManual_Click(sender, e)
+
+        ' Ordenamos numUsuario
+        ordenar(numUsuario)
+        ' mOSTRAMOS RESULTADOS
+        mostrarReintegro()
+        mostrar_Resultados_Sorteo()
     End Sub
 
 
