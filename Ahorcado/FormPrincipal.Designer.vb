@@ -22,7 +22,7 @@ Partial Class FormPrincipal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Panel1 = New Panel()
+        panelBotones = New Panel()
         Button27 = New Button()
         Button28 = New Button()
         Button21 = New Button()
@@ -52,47 +52,55 @@ Partial Class FormPrincipal
         Button1 = New Button()
         MenuStrip1 = New MenuStrip()
         ArchivoToolStripMenuItem = New ToolStripMenuItem()
-        DiccionarioToolStripMenuItem = New ToolStripMenuItem()
-        AyudaToolStripMenuItem = New ToolStripMenuItem()
         NuevoJuegoToolStripMenuItem = New ToolStripMenuItem()
         SalirToolStripMenuItem = New ToolStripMenuItem()
-        Panel1.SuspendLayout()
+        DiccionarioToolStripMenuItem = New ToolStripMenuItem()
+        AyudaToolStripMenuItem = New ToolStripMenuItem()
+        CómoJugarToolStripMenuItem = New ToolStripMenuItem()
+        AcercaDeToolStripMenuItem = New ToolStripMenuItem()
+        lblIntentos = New Label()
+        txtBoxIntentos = New TextBox()
+        picBoxAhorcado = New PictureBox()
+        panelPalabra = New FlowLayoutPanel()
+        NivelToolStripMenuItem = New ToolStripMenuItem()
+        panelBotones.SuspendLayout()
         MenuStrip1.SuspendLayout()
+        CType(picBoxAhorcado, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Panel1
+        ' panelBotones
         ' 
-        Panel1.Controls.Add(Button27)
-        Panel1.Controls.Add(Button28)
-        Panel1.Controls.Add(Button21)
-        Panel1.Controls.Add(Button22)
-        Panel1.Controls.Add(Button23)
-        Panel1.Controls.Add(Button24)
-        Panel1.Controls.Add(Button25)
-        Panel1.Controls.Add(Button16)
-        Panel1.Controls.Add(Button17)
-        Panel1.Controls.Add(Button18)
-        Panel1.Controls.Add(Button19)
-        Panel1.Controls.Add(Button20)
-        Panel1.Controls.Add(Button11)
-        Panel1.Controls.Add(Button12)
-        Panel1.Controls.Add(Button13)
-        Panel1.Controls.Add(Button14)
-        Panel1.Controls.Add(Button15)
-        Panel1.Controls.Add(Button6)
-        Panel1.Controls.Add(Button7)
-        Panel1.Controls.Add(Button8)
-        Panel1.Controls.Add(Button9)
-        Panel1.Controls.Add(Button10)
-        Panel1.Controls.Add(Button5)
-        Panel1.Controls.Add(Button4)
-        Panel1.Controls.Add(Button3)
-        Panel1.Controls.Add(Button2)
-        Panel1.Controls.Add(Button1)
-        Panel1.Location = New Point(402, 122)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(240, 285)
-        Panel1.TabIndex = 0
+        panelBotones.Controls.Add(Button27)
+        panelBotones.Controls.Add(Button28)
+        panelBotones.Controls.Add(Button21)
+        panelBotones.Controls.Add(Button22)
+        panelBotones.Controls.Add(Button23)
+        panelBotones.Controls.Add(Button24)
+        panelBotones.Controls.Add(Button25)
+        panelBotones.Controls.Add(Button16)
+        panelBotones.Controls.Add(Button17)
+        panelBotones.Controls.Add(Button18)
+        panelBotones.Controls.Add(Button19)
+        panelBotones.Controls.Add(Button20)
+        panelBotones.Controls.Add(Button11)
+        panelBotones.Controls.Add(Button12)
+        panelBotones.Controls.Add(Button13)
+        panelBotones.Controls.Add(Button14)
+        panelBotones.Controls.Add(Button15)
+        panelBotones.Controls.Add(Button6)
+        panelBotones.Controls.Add(Button7)
+        panelBotones.Controls.Add(Button8)
+        panelBotones.Controls.Add(Button9)
+        panelBotones.Controls.Add(Button10)
+        panelBotones.Controls.Add(Button5)
+        panelBotones.Controls.Add(Button4)
+        panelBotones.Controls.Add(Button3)
+        panelBotones.Controls.Add(Button2)
+        panelBotones.Controls.Add(Button1)
+        panelBotones.Location = New Point(402, 122)
+        panelBotones.Name = "panelBotones"
+        panelBotones.Size = New Size(240, 285)
+        panelBotones.TabIndex = 0
         ' 
         ' Button27
         ' 
@@ -339,7 +347,7 @@ Partial Class FormPrincipal
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {ArchivoToolStripMenuItem, DiccionarioToolStripMenuItem, AyudaToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {ArchivoToolStripMenuItem, NivelToolStripMenuItem, DiccionarioToolStripMenuItem, AyudaToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(691, 24)
@@ -353,18 +361,6 @@ Partial Class FormPrincipal
         ArchivoToolStripMenuItem.Size = New Size(60, 20)
         ArchivoToolStripMenuItem.Text = "Archivo"
         ' 
-        ' DiccionarioToolStripMenuItem
-        ' 
-        DiccionarioToolStripMenuItem.Name = "DiccionarioToolStripMenuItem"
-        DiccionarioToolStripMenuItem.Size = New Size(79, 20)
-        DiccionarioToolStripMenuItem.Text = "Diccionario"
-        ' 
-        ' AyudaToolStripMenuItem
-        ' 
-        AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        AyudaToolStripMenuItem.Size = New Size(53, 20)
-        AyudaToolStripMenuItem.Text = "Ayuda"
-        ' 
         ' NuevoJuegoToolStripMenuItem
         ' 
         NuevoJuegoToolStripMenuItem.Name = "NuevoJuegoToolStripMenuItem"
@@ -377,24 +373,92 @@ Partial Class FormPrincipal
         SalirToolStripMenuItem.Size = New Size(180, 22)
         SalirToolStripMenuItem.Text = "Salir"
         ' 
+        ' DiccionarioToolStripMenuItem
+        ' 
+        DiccionarioToolStripMenuItem.Name = "DiccionarioToolStripMenuItem"
+        DiccionarioToolStripMenuItem.Size = New Size(79, 20)
+        DiccionarioToolStripMenuItem.Text = "Diccionario"
+        ' 
+        ' AyudaToolStripMenuItem
+        ' 
+        AyudaToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CómoJugarToolStripMenuItem, AcercaDeToolStripMenuItem})
+        AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
+        AyudaToolStripMenuItem.Size = New Size(53, 20)
+        AyudaToolStripMenuItem.Text = "Ayuda"
+        ' 
+        ' CómoJugarToolStripMenuItem
+        ' 
+        CómoJugarToolStripMenuItem.Name = "CómoJugarToolStripMenuItem"
+        CómoJugarToolStripMenuItem.Size = New Size(180, 22)
+        CómoJugarToolStripMenuItem.Text = "Cómo Jugar"
+        ' 
+        ' AcercaDeToolStripMenuItem
+        ' 
+        AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
+        AcercaDeToolStripMenuItem.Size = New Size(180, 22)
+        AcercaDeToolStripMenuItem.Text = "Acerca de"
+        ' 
+        ' lblIntentos
+        ' 
+        lblIntentos.AutoSize = True
+        lblIntentos.Location = New Point(34, 48)
+        lblIntentos.Name = "lblIntentos"
+        lblIntentos.Size = New Size(53, 15)
+        lblIntentos.TabIndex = 2
+        lblIntentos.Text = "Intentos:"
+        ' 
+        ' txtBoxIntentos
+        ' 
+        txtBoxIntentos.Location = New Point(93, 45)
+        txtBoxIntentos.Name = "txtBoxIntentos"
+        txtBoxIntentos.ReadOnly = True
+        txtBoxIntentos.Size = New Size(37, 23)
+        txtBoxIntentos.TabIndex = 3
+        ' 
+        ' picBoxAhorcado
+        ' 
+        picBoxAhorcado.Location = New Point(43, 122)
+        picBoxAhorcado.Name = "picBoxAhorcado"
+        picBoxAhorcado.Size = New Size(229, 285)
+        picBoxAhorcado.TabIndex = 5
+        picBoxAhorcado.TabStop = False
+        ' 
+        ' panelPalabra
+        ' 
+        panelPalabra.Location = New Point(417, 45)
+        panelPalabra.Name = "panelPalabra"
+        panelPalabra.Size = New Size(240, 34)
+        panelPalabra.TabIndex = 6
+        ' 
+        ' NivelToolStripMenuItem
+        ' 
+        NivelToolStripMenuItem.Name = "NivelToolStripMenuItem"
+        NivelToolStripMenuItem.Size = New Size(46, 20)
+        NivelToolStripMenuItem.Text = "Nivel"
+        ' 
         ' FormPrincipal
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(691, 450)
-        Controls.Add(Panel1)
+        Controls.Add(panelPalabra)
+        Controls.Add(picBoxAhorcado)
+        Controls.Add(txtBoxIntentos)
+        Controls.Add(lblIntentos)
+        Controls.Add(panelBotones)
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
         Name = "FormPrincipal"
-        Text = "Form1"
-        Panel1.ResumeLayout(False)
+        Text = "Ahorcado"
+        panelBotones.ResumeLayout(False)
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
+        CType(picBoxAhorcado, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents panelBotones As Panel
     Friend WithEvents Button27 As Button
     Friend WithEvents Button28 As Button
     Friend WithEvents Button21 As Button
@@ -428,5 +492,12 @@ Partial Class FormPrincipal
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DiccionarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CómoJugarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AcercaDeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblIntentos As Label
+    Friend WithEvents txtBoxIntentos As TextBox
+    Friend WithEvents picBoxAhorcado As PictureBox
+    Friend WithEvents panelPalabra As FlowLayoutPanel
+    Friend WithEvents NivelToolStripMenuItem As ToolStripMenuItem
 
 End Class
