@@ -45,7 +45,13 @@ Partial Class FormPrincipal
         btn050 = New Button()
         btn1euro = New Button()
         btn150 = New Button()
+        MenuStrip1 = New MenuStrip()
+        EncenderNuevaCompraToolStripMenuItem = New ToolStripMenuItem()
+        DescuentoToolStripMenuItem = New ToolStripMenuItem()
+        InventarioToolStripMenuItem = New ToolStripMenuItem()
+        SalirToolStripMenuItem = New ToolStripMenuItem()
         panelNumerico.SuspendLayout()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' panelNumerico
@@ -232,9 +238,9 @@ Partial Class FormPrincipal
         ' 
         ' panelEscaparate
         ' 
-        panelEscaparate.Location = New Point(12, 12)
+        panelEscaparate.Location = New Point(12, 27)
         panelEscaparate.Name = "panelEscaparate"
-        panelEscaparate.Size = New Size(290, 306)
+        panelEscaparate.Size = New Size(290, 291)
         panelEscaparate.TabIndex = 3
         ' 
         ' lblSaldo
@@ -294,11 +300,45 @@ Partial Class FormPrincipal
         btn150.Text = "Introducir 1.50€"
         btn150.UseVisualStyleBackColor = False
         ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Items.AddRange(New ToolStripItem() {EncenderNuevaCompraToolStripMenuItem, DescuentoToolStripMenuItem, InventarioToolStripMenuItem, SalirToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(706, 24)
+        MenuStrip1.TabIndex = 10
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' EncenderNuevaCompraToolStripMenuItem
+        ' 
+        EncenderNuevaCompraToolStripMenuItem.Name = "EncenderNuevaCompraToolStripMenuItem"
+        EncenderNuevaCompraToolStripMenuItem.Size = New Size(68, 20)
+        EncenderNuevaCompraToolStripMenuItem.Text = "Encender"
+        ' 
+        ' DescuentoToolStripMenuItem
+        ' 
+        DescuentoToolStripMenuItem.Name = "DescuentoToolStripMenuItem"
+        DescuentoToolStripMenuItem.Size = New Size(75, 20)
+        DescuentoToolStripMenuItem.Text = "Descuento"
+        ' 
+        ' InventarioToolStripMenuItem
+        ' 
+        InventarioToolStripMenuItem.Name = "InventarioToolStripMenuItem"
+        InventarioToolStripMenuItem.Size = New Size(72, 20)
+        InventarioToolStripMenuItem.Text = "Inventario"
+        ' 
+        ' SalirToolStripMenuItem
+        ' 
+        SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        SalirToolStripMenuItem.Size = New Size(41, 20)
+        SalirToolStripMenuItem.Text = "Salir"
+        ' 
         ' FormPrincipal
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(706, 330)
+        Controls.Add(MenuStrip1)
         Controls.Add(btn150)
         Controls.Add(btn1euro)
         Controls.Add(btn050)
@@ -308,10 +348,13 @@ Partial Class FormPrincipal
         Controls.Add(lblSeleccion)
         Controls.Add(txtBoxSeleccion)
         Controls.Add(panelNumerico)
+        MainMenuStrip = MenuStrip1
         Name = "FormPrincipal"
         Text = "Form1"
         panelNumerico.ResumeLayout(False)
         panelNumerico.PerformLayout()
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -338,5 +381,10 @@ Partial Class FormPrincipal
     Friend WithEvents btn050 As Button
     Friend WithEvents btn1euro As Button
     Friend WithEvents btn150 As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents EncenderNuevaCompraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DescuentoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InventarioToolStripMenuItem As ToolStripMenuItem
 
 End Class

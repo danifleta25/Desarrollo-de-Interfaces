@@ -1,10 +1,10 @@
 ﻿Public Class FormPrincipal
     Dim FormInventario As New FormInventario
-
+    Dim descuentoActual As Double = 0.0
 
 
     Public Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'desabilitarBotones(false)
+        desabilitarBotones(False)
 
         ActualizarEscaparate()
         txtBoxSaldo.Text = "0"
@@ -39,6 +39,7 @@
             Dim codigo As String = linea(0).Trim()
             Dim nombre As String = linea(1).Trim()
             Dim precio As Double = Double.Parse(linea(2).Trim())
+            Dim precioFinal As Double = precio * (1 - descuentoActual)
             Dim stock As Integer = Integer.Parse(linea(3).Trim())
 
 
@@ -51,7 +52,7 @@
                 lbl.Text = $"{codigo} - {nombre}{vbCrLf} - AGOTADO"
                 lbl.BackColor = Color.LightCoral
             Else
-                lbl.Text = $"{codigo} - {nombre}{vbCrLf} - {precio:F2}€"
+                lbl.Text = $"{codigo} - {nombre}{vbCrLf} - {precioFinal:F2}€"
                 lbl.BackColor = Color.WhiteSmoke
             End If
 
@@ -87,6 +88,7 @@
                 encontrado = True
                 Dim nombre As String = linea(1).Trim()
                 Dim precio As Double = Double.Parse(linea(2).Trim())
+                Dim precioFinal As Double = precio * (1 - descuentoActual)
                 Dim stock As Integer = Integer.Parse(linea(3).Trim())
                 Dim saldo As Double = Double.Parse(txtBoxSaldo.Text)
 
@@ -98,7 +100,7 @@
                 End If
 
                 'Comprobar saldo
-                If saldo < precio Then
+                If saldo < precioFinal Then
                     ' Aquí cargarías imagen de error
                     MessageBox.Show($"Saldo insuficiente para comprar {nombre}.", "Saldo insuficiente")
                     Exit For
@@ -106,7 +108,7 @@
 
                 ' Si hay stock y saldo suficiente, realizar la compra
                 stock -= 1
-                saldo -= precio
+                saldo -= precioFinal
 
 
                 ' Actualizar el saldo en la interfaz
@@ -115,7 +117,7 @@
                 ' Actualizar el stock en FormInventario
                 FormInventario.listBoxProductos.Items(i) = $"{codigo} - {nombre} - {precio:F2} - {stock}"
 
-                MessageBox.Show($"Has comprado {nombre} por {precio:F2}€")
+                MessageBox.Show($"Has comprado {nombre} por {precioFinal:F2}€")
 
                 ActualizarEscaparate()
                 txtBoxSeleccion.Text = ""
@@ -132,4 +134,33 @@
         End If
 
     End Sub
+
+    Private Sub EncenderNuevaCompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncenderNuevaCompraToolStripMenuItem.Click
+        desabilitarBotones(True)
+        txtBoxSaldo.Text = "0,00"
+        txtBoxSeleccion.Text = ""
+        ActualizarEscaparate()
+        ' Si usas PictureBox para estados:
+        ' cambiarImagenEstado("estado_espera.png")
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Application.Exit() ' O Me.Close()
+    End Sub
+
+    Private Sub ConfiguracionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DescuentoToolStripMenuItem.Click
+        Dim frmModo As New FormModo()
+        If frmModo.ShowDialog() = DialogResult.OK Then
+            descuentoActual = frmModo.DescuentoSeleccionado
+            ActualizarEscaparate() ' Refresca los precios visuales en pantalla
+        End If
+    End Sub
+
+    Private Sub InventarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventarioToolStripMenuItem.Click
+        FormInventario.ShowDialog()
+        ActualizarEscaparate() ' Refleja los productos añadidos, borrados o repuestos
+    End Sub
+
+
+
 End Class
