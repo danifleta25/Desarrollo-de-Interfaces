@@ -19,6 +19,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LoteriaPrimitiva", "Loteria
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Ahorcado", "Ahorcado\Ahorcado.vbproj", "{FD19E954-59CD-471F-A25C-02197AFAD7C0}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MaquinaExpendedora", "MaquinaExpendedora\MaquinaExpendedora.vbproj", "{527BBC0E-28B8-4EAE-8C40-FD6C172396B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{FD19E954-59CD-471F-A25C-02197AFAD7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD19E954-59CD-471F-A25C-02197AFAD7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD19E954-59CD-471F-A25C-02197AFAD7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{527BBC0E-28B8-4EAE-8C40-FD6C172396B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{527BBC0E-28B8-4EAE-8C40-FD6C172396B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{527BBC0E-28B8-4EAE-8C40-FD6C172396B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{527BBC0E-28B8-4EAE-8C40-FD6C172396B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
